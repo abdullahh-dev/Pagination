@@ -17,7 +17,7 @@ function App() {
     fetchProducts();
   }, []);
   return (
-    <div className="bg-fuchsia-700">
+    <div>
       <Posts products={products} />
     </div>
   );
