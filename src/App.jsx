@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import './App.css';
-import Pagination from './assets/components/Pagination';
+import Pagination from './components/Pagination';
 import axios from 'axios';
-import Posts from './assets/components/Posts';
+import Posts from './components/Posts';
 
 function App() {
   const [products, setProducts] = useState([]);
@@ -24,8 +24,8 @@ function App() {
     indexofLastProduct
   );
 
-  const paginate = (pagenumber) => {
-    setCurrentPage(pagenumber);
+  const paginate = (pageNumber) => {
+    setCurrentPage(pageNumber);
   };
 
   return (

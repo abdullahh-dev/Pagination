@@ -4,7 +4,7 @@ function Posts({ products }) {
   return (
     <div className="flex gap-12 mt-24 p-2 justify-center flex-wrap ">
       {products.map((products) => (
-        <div
+        <div 
           className="hover:shadow-md border rounded-md px-5 mb-3 w-[300px]"
           key={products.id}>
           <div className="mb-2">
