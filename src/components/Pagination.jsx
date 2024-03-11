@@ -5,14 +5,16 @@ function Pagination({ productsPerPage, totalProducts, paginate }) {
   for (let i = 1; i <= Math.ceil(totalProducts / productsPerPage); i++) {
     pageNumber.push(i);
   }
-  return (
+  return pageNumber.length <= 1 ? (
+    false
+  ) : (
     <nav className="flex justify-center mt-40">
       <ul className="flex">
         {pageNumber.map((number) => (
           <li className="bg-gray-100 border  px-4 py-1 text-[24px]">
-            <a onClick={() => paginate(number)} key={number} href="#!">
+            <button onClick={() => paginate(number)} key={number}>
               {number}
-            </a>
+            </button>
           </li>
         ))}
       </ul>
